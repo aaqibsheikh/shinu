@@ -6,7 +6,7 @@ const styles = {
   header: "flex flex-row justify-between items-center w-full sm:py-6 py-2",
   exchangeContainer:
     "flex-1 flex justify-start items-center flex-col w-full",
-  headTitle: "text-white font-poppins font-black text-5xl tracking-wide",
+  headTitle: "text-white font-poppins font-black text-3xl tracking-wide",
   subTitle: "text-dim-white font-poppins font-medium mt-3 text-base",
   exchangeBoxWrapper: "mt-10 w-full flex justify-center mb-20",
   exchangeBox:
