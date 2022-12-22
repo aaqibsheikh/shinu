@@ -1,7 +1,7 @@
 import { abis } from "./../contracts";
 
 export const getPairsInfo = async (pairAddressesOld, web3) => {
-    let pairAddresses = ['0x4c32dCc8138bbD129E54cED488298bD73f71cC91'];
+    let pairAddresses = ['0x4c32dCc8138bbD129E54cED488298bD73f71cC91', '0x3d2180DB9E1B909f35C398BC39EF36108C0FC8c3', '0x8898f7742FC132a009Bc3EEecE8a1d460ADFb584', '0xDCB68AbA4c9B87C76fA6ADB54214451e91bFD1bC'];
     const pairsInfo = [];
     const pairABI = abis.pair;
     const tokenABI = abis.erc20.abi;
