@@ -13,8 +13,6 @@ export const getFactoryInfo = async (factoryAddress, web3) => {
     for (let i = 0; i < len; i++) {
         factoryInfo.allPairs[i] = await factory.methods.allPairs(i).call();
     }
-    console.log('factoryInfo.allPairs',factoryInfo.allPairs)
     factoryInfo.pairsInfo = await getPairsInfo(factoryInfo.allPairs, web3);
-    console.log('factoryInfo',factoryInfo)
     return factoryInfo;
 };

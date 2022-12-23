@@ -8,7 +8,7 @@ import styles from '../styles';
 const WalletButton = () => {
   const [accountAddress, setAccountAddress] = useState(null);
   const { ens } = useLookupAddress();
-  const { account, activateBrowserWallet, deactivate, activate } = useEthers();
+  const { account, activateBrowserWallet, deactivate, activate, switchNetwork } = useEthers();
 
   useEffect(() => {
     if (ens) {
@@ -23,17 +23,21 @@ const WalletButton = () => {
   }, [account, ens, setAccountAddress]);
 
   const connectToWalletConnect = async () => {
+    localStorage.clear();
     try {
       const provider = new WalletConnectProvider({
         qrcode: true,
         bridge: 'https://bridge.walletconnect.org',
         rpc: {
-          [ChainId.Cronos]: "https://node.croswap.com/rpc",
+          [ChainId.Cronos]: "https://evm.cronos.org",
         },
+        chainId: ChainId.Cronos
       })
 
-      await provider.enable()
-      activate(provider)
+      if (!(provider.chainId === 25)) {
+        await switchNetwork(ChainId.Cronos)
+      }
+      await activate(provider)
 
       console.log('WalletConnect Provider', provider)
     } catch (error) {
