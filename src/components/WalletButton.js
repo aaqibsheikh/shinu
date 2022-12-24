@@ -31,14 +31,15 @@ const WalletButton = () => {
         rpc: {
           [ChainId.Cronos]: "https://evm.cronos.org",
         },
-        chainId: ChainId.Cronos
+        chainId: 25
       })
-
+      
       if (!(provider.chainId === 25)) {
-        await switchNetwork(ChainId.Cronos)
+        await switchNetwork(25)
       }
+      await provider.enable()
       await activate(provider)
-
+      
       console.log('WalletConnect Provider', provider)
     } catch (error) {
       console.error(error)
