@@ -62,7 +62,7 @@ const App = () => {
           <WalletButton />
         </header>
         <div className={styles.exchangeContainer}>
-          <h1 className={styles.headTitle}>SHINU-SWAP</h1>
+          <h1 className={styles.headTitle}>EZswap</h1>
           <p className={styles.subTitle}>Exchange tokens in seconds</p>
           <div className={styles.exchangeBoxWrapper}>
             <div className={styles.exchangeBox}>
