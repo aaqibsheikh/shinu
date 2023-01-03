@@ -22,7 +22,7 @@ const styles = {
   currencyButton:
     "flex flex-row items-center bg-site-dim2 py-2 px-4 rounded-xl font-poppins font-bold text-white",
   currencyList:
-    "absolute z-10 right-0 bg-site-black border-[1px] border-site-dim2 w-full mt-2 rounded-lg min-w-[170px] h-[300px] overflow-y-scroll",
+    "absolute z-10 right-0 bg-site-black border-[1px] border-site-dim2 w-full mt-2 rounded-lg min-w-[200px] h-[300px] overflow-y-scroll",
   currencyListItem:
     "font-poppins font-medium text-base text-white hover:text-dim-white px-5 py-3 hover:bg-site-dim2 cursor-pointer",
 
