@@ -30,7 +30,9 @@ export const getPairsInfo = async (pairAddressesOld, web3) => {
         '0x7AaF2e3AFde06A7f9E686c1dDE4fAB14979384ce',
         '0x3Eb9FF92e19b73235A393000C176c8bb150F1B20',
         '0x9e5bd780dff875Dd85848a65549791445AE25De0',
-        '0x326d947eE700bb99A952ffB2f7758bBA8BA08DF0'
+        '0x326d947eE700bb99A952ffB2f7758bBA8BA08DF0',
+        '0x0DFAE06780A32988CB84CAc5851b93e2F3B0Bb4e',
+        '0xFAf2d74b8410c34d7a0DE23918D287F1beA5707a'
     ];
     const pairsInfo = [];
     const pairABI = abis.pair;
